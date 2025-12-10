@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Page – Estrutura Base</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+    document.addEventListener("scroll", () => {
+        const links = document.querySelectorAll(".menu-link");
+
+        links.forEach(link => {
+            const section = document.querySelector(link.getAttribute("href"));
+            if (!section) return;
+
+            const top = section.offsetTop - 150;
+            const bottom = top + section.offsetHeight;
+            const scroll = window.scrollY;
+
+            if (scroll >= top && scroll < bottom) {
+                links.forEach(l => l.classList.remove("active"));
+                link.classList.add("active");
+            }
+        });
+    });
+    </script>
+
+</head>
+
+<body class="site-bg">
+
+<!-- ======================================================
+     SEÇÃO 1
+====================================================== -->
+
+<section id="secao-1" class="secao-padrao no-padding-top top">
+    <div class="container">
+
+        <!-- 2 COLUNAS -->
+        <div>
+
+            <div class="logo"></div>
+
+            <nav class="menu">
+                <ul>
+                    <li><a class="menu-link" href="#secao-1">Tigre</a></li>
+                    <li><a class="menu-link" href="#secao-2">Plataforma Tigre</a></li>
+                    <li><a class="menu-link" href="#secao-3">Educa Tigre</a></li>
+                    <li><a class="menu-link" href="#secao-4">Profissionais de Obra</a></li>
+                    <li><a class="menu-link" href="#secao-5">Balconistas</a></li>
+                    <li><a class="menu-link" href="#secao-6">Cadastre-se</a></li>
+                </ul>
+            </nav>
+        
+            <div class="box-txt">
+                <p class="big">
+                    Com uma história de mais de 84 anos, o <span class="orange-txt">Tigre</span> é uma multinacional brasileira com forte presença internacional, líder em soluções para construção civil. A empresa oferece um amplo portfólio de produtos que cresce a cada ano.
+                </p>
+                <p class="big">
+                Somos movidos por cuidar da água para transformar a qualidade de vida das pessoas. Transformamos sua experiência com a água para além da obra, por meio das melhores soluções do mercado.
+                </p>
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe width="100%" height="500" 
+                src="https://www.youtube.com/embed/btPJPFnesV4?si=lup0uYOA1CSZsUFf"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <img class="div-img" src="img/div.png" alt="">
+    </div>
+</section>
+
+
+<section id="secao-2" class="secao-padrao dark-blue">
+    <div class="container">
+
+        <!-- 2 COLUNAS -->
+        <div class="duas-colunas">
+            <div class="col-esquerda">
+                <img src="img/banner1.jpg" alt="Imagem ilustrativa">
+            </div>
+
+            <div class="col-direita">
+                <p class="big">
+                    Plataforma oficial de capacitação da <span class="orange-txt">Tigre</span>, criada para reunir em um só lugar todos os cursos, treinamentos e conteúdos da marca, tanto presenciais quanto online.
+                </p>
+                <p class="big">
+                    Nosso <span class="orange-txt">principal objetivo</span> é promover o desenvolvimento contínuo de pessoas, oferecendo conhecimento prático e atualizado para fortalecer competências e impulsionar carreiras.
+                </p>
+            </div>
+        </div>
+
+        <!-- CARDS LINHA 1 -->
+        <div class="cards-3col">
+            <div class="card flex">
+                <h3 class="upper"><span class="orange-txt">Você vai encontrar</span> na Educa Tigre</h3>
+            </div>
+
+            <div class="card orange">
+                <img src="img/ico-sec1-1.png" class="icon">
+                <h3>Cursos Online:</h3>
+                <p>vídeos e materiais instrutivos disponíveis na plataforma para você acessar quando quiser e quantas vezes precisar.</p>
+            </div>
+
+            <div class="card orange">
+                <img src="img/ico-sec1-1.png" class="icon">
+                <h3>Cursos Ao Vivo</h3>
+                <p>encontros online ministrados pelos nossos Consultores de Treinamento, em datas e horários agendados.</p>
+            </div>
+        </div>
+
+        <!-- CARDS LINHA 2 -->
+        <div class="cards-3col">
+            <div class="card orange">
+                <img src="img/ico-sec1-1.png" class="icon">
+                <h3>Webinars</h3>
+                <p>seminários online — gravados ou ao vivo — que permitem interação pelo chat e trazem conteúdos objetivos e práticos.</p>
+            </div>
+
+            <div class="card orange">
+                <img src="img/ico-sec1-1.png" class="icon">
+                <h3>Cursos Presenciais:</h3>
+                <p>treinamentos conduzidos pelos instrutores de treinamento da nossa equipe técnica, realizados presencialmente em diversas regiões do Brasil.</p>
+            </div>
+
+            <div class="card orange">
+                <img src="img/ico-sec1-1.png" class="icon">
+                <h3>Materiais de Apoio:</h3>
+                <p>conteúdos rápidos, pensados para consulta imediata e aprendizado prático a qualquer momento.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ======================================================
+     SEÇÃO – COLABORADORES
+====================================================== -->
+<section id="secao-3" class="secao-colaboradores secao-padrao light-blue">
+    <div class="container">
+
+        <!-- 2 COLUNAS -->
+        <div class="duas-colunas">
+            <div class="col-esquerda">
+                <img src="img/banner2.jpg" alt="Imagem ilustrativa">
+            </div>
+
+            <div class="col-direita">
+                <h2>Para quem é a Educa Tigre</h2>
+                <p class="big">
+                    A <span class="orange-txt">Educa Tigre</span> foi criada para apoiar diferentes públicos que fazem parte do ecossistema da marca. Aqui, você encontra formações 100% gratuitas que estimulam o desenvolvimento de habilidades, geram oportunidades e colaboram com o seu desenvolvimento profissional.
+                </p>
+                <p class="big">
+                    A seguir, confira quem são os públicos da Educa Tigre:
+                </p>
+            </div>
+        </div>
+
+        <img class="div-img" src="img/div.png" alt="">
+
+        <h2 class="titulo-orange">COLABORADORES TIGRE</h2>
+
+        <p class="descricao-colab">
+            Para quem faz parte do time Tigre e busca evoluir continuamente. A Educa Tigre oferece conteúdos que fortalecem nossa cultura organizacional, desenvolvem líderes e aprimoram habilidades por meio de ferramentas práticas, ajudando a resolver desafios do dia a dia e a impulsionar a eficiência operacional.
+        </p>
+
+        <!-- GRID COLABORADORES -->
+        <div class="grid-colaboradores">
+
+            <div class="item-colab">
+                <img src="img/ico-sec-quem-1.png" class="icon-colab">
+                <p>Conteúdos que fortalecem a cultura organizacional</p>
+            </div>
+
+            <div class="item-colab">
+                <img src="img/ico-sec-quem-1.png" class="icon-colab">
+                <p>Programas de desenvolvimento de líderes</p>
+            </div>
+
+            <div class="item-colab">
+                <img src="img/ico-sec-quem-1.png" class="icon-colab">
+                <p>Ferramentas práticas para resolver desafios do dia a dia</p>
+            </div>
+
+            <div class="item-colab">
+                <img src="img/ico-sec-quem-1.png" class="icon-colab">
+                <p>Cursos que aprimoram habilidades e impulsionam a eficiência operacional</p>
+            </div>
+
+        </div>
+
+        <div class="cta-muito-mais">E muito mais!</div>
+
+    </div>
+</section>
+
+<!-- ======================================================
+     SEÇÃO 2
+====================================================== -->
+<section class="secao-padrao orange">
+    <div class="container">
+
+        <!-- 2 COLUNAS -->
+        <div class="duas-colunas">
+            <div class="col-esquerda">
+                <img class="icon-tigre" src="img/icon-tigre.png" alt="Imagem ilustrativa">
+            </div>
+
+            <div class="col-direita">
+                <p class="bigger">
+                    <span class="blue-txt">Como entro na plataforma sendo um</span> colaborador Tigre?
+                </p>
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe width="100%" height="500" 
+                src="https://www.youtube.com/embed/btPJPFnesV4?si=lup0uYOA1CSZsUFf"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- 2 COLUNAS -->
+        <div id="secao-4" class="duas-colunas">
+            <div class="col-esquerda">
+                <img src="img/banner3.jpg" alt="Imagem ilustrativa">
+            </div>
+
+            <div class="col-direita">
+                <h2 class="blue-txt">Profissionais de Obra</h2>
+                <p class="big">
+                    Para quem está na rotina da construção. Aqui, você encontra cursos práticos que ajudam a melhorar seu desempenho no dia a dia da obra, aprendendo técnicas de hidráulica, elétrica, pintura, irrigação e muito mais.
+                </p>
+                <p class="big">
+                    Ao participar da <span class="blue-txt">Educa Tigre</span>, você passa a fazer parte do <span class="blue-txt">Clube dos Feras</span>, com acesso a vantagens exclusivas, materiais técnicos, campanhas especiais e novidades da Tigre antes de todo mundo.
+                </p>
+            </div>
+        </div>
+
+        <!-- CARDS -->
+        <div class="cards-3col">
+
+            <div class="card blue">
+                <img src="img/ico-sec1-1.png" class="icon">
+                <h3>Conteúdos práticos sobre instalação, manutenção e boas práticas.</h3>
+            </div>
+
+            <div class="card blue">
+                <img src="img/ico-sec1-1.png" class="icon">
+                <h3>Módulos interativos que simulam situações reais de obra.</h3>
+            </div>
+
+            <div class="card blue">
+                <img src="img/ico-sec1-1.png" class="icon">
+                <h3>Vídeos passo a passo para facilitar o aprendizado e a navegação na plataforma.</h3>
+            </div>
+
+            <div class="card max-card">
+                <h3>E muito mais!</h3>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ======================================================
+     SEÇÃO 3
+====================================================== -->
+<section id="secao-5" class="secao-padrao purple">
+    <div class="container">
+
+        <!-- 2 COLUNAS -->
+        <div class="duas-colunas">
+            <div class="col-esquerda">
+                <img src="img/banner4.jpg" alt="Imagem ilustrativa">
+            </div>
+
+            <div class="col-direita">
+                <h2>Vendedores e Lojistas </h2>
+                <p class="big">
+                    Quem atua no balcão e nas lojas de materiais de construção. Aqui, você encontra conteúdos rápidos, práticos e voltados para o dia a dia, que ajudam a entender melhor os produtos Tigre e a oferecer soluções precisas para cada cliente.
+                </p>
+                <p class="big">
+                    Os cursos são gratuitos, online e fáceis de acompanhar, permitindo que você aprenda no seu ritmo e transforme conhecimento em resultados de venda. Além disso, ao se capacitar com a Educa Tigre, você avança no programa <span class="orange-txt">Junto Somos Mais</span>, conquistando pontos e trocando por recompensas.
+                </p>
+            </div>
+        </div>
+
+        <!-- CARDS -->
+        <div class="cards-3col">
+            <div class="card">
+                <img src="img/ico-sec1-1.png" class="icon">
+                <h3>Treinamentos rápidos e dinâmicos sobre produtos e técnicas de venda</h3>
+            </div>
+
+            <div class="card">
+                <img src="img/ico-sec1-1.png" class="icon">
+                <h3>Materiais de apoio para atendimento ao cliente e fidelização</h3>
+            </div>
+
+            <div class="card">
+                <img src="img/ico-sec1-1.png" class="icon">
+                <h3>Conteúdos que transformam o vendedor em um consultor especializado</h3>
+            </div>
+
+            <div class="card max-card">
+                <h3>E muito mais!</h3>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ======================================================
+     SEÇÃO 4 — FORMULÁRIO
+====================================================== -->
+<section id="secao-6" class="secao-padrao">
+    <section class="form-section">
+        <div class="form-box">
+
+            <h2 class="title">COMO SE CADASTRAR?</h2>
+
+            <p class="subtitle">
+                Cadastre-se na Educa Tigre de forma rápida. Você mesmo preenche seus dados pessoais e já pode começar a ver os treinamentos.
+            </p>
+
+            <p class="highlight">
+                Veja o que é necessário para você prosseguir com seu cadastro:
+            </p>
+
+            <div class="divider"></div>
+
+            <form class="input-list">
+
+                <div class="input-item">
+                    <label>Nome completo</label>
+                    <input type="text" name="nome" required>
+                </div>
+
+                <div class="input-item">
+                    <label>E-mail (digite duas vezes para confirmar)</label>
+                    <input type="email" name="email" required>
+                    <input type="email" name="email_confirmacao" required placeholder="Confirmar e-mail">
+                </div>
+
+                <div class="input-item">
+                    <label>CPF (sem pontos ou traços)</label>
+                    <input type="text" name="cpf" required>
+                </div>
+
+                <div class="input-item">
+                    <label>Telefone celular / WhatsApp</label>
+                    <input type="tel" name="telefone" required>
+                </div>
+
+                <div class="input-item">
+                    <label>Estado</label>
+                    <input type="text" name="estado" required>
+                </div>
+
+                <div class="input-item">
+                    <label>Profissão</label>
+                    <input type="text" name="profissao" required>
+                </div>
+
+                <div class="input-item long">
+                    <label>
+                        CNPJ da loja em que trabalha<br>
+                        <span>(somente para lojistas e distribuidores).</span>
+                    </label>
+                    <input type="text" name="cnpj">
+                </div>
+
+            </form>
+
+
+            <p class="video-title">Veja o vídeo com o passo a passo:</p>
+
+            <div class="video-box">
+                <img src="img/video-thumb.jpg" class="video-img" alt="">
+                <div class="play-button">&#9658;</div>
+            </div>
+
+            <a href="#" class="btn-action">
+                CADASTRE-SE AGORA<br>CLICANDO AQUI
+            </a>
+
+        </div>
+    </section>
+</section>
+
+</body>
+</html>

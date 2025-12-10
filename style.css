@@ -1,0 +1,512 @@
+/* ======================================================
+   CONFIGURAÇÕES GLOBAIS
+====================================================== */
+
+/* rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    overflow-x: hidden; /* impede rolagem lateral */
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #06245A;
+    color: #ffffff;
+}
+
+/* Layout padrão */
+body.site-bg {
+    background: #06224A;
+}
+
+.no-padding-top {padding-top: 50px}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    transition: 0.2s ease;
+}
+
+.menu a:hover {
+    color: #ff7e00; /* pode trocar pela cor laranja Tigre */
+}
+
+.menu-link.active {
+    color: #ff7e00; /* laranja da Tigre */
+    font-weight: 700;
+    border-bottom: 2px solid #ff7e00;
+    padding-bottom: 3px;
+}
+
+
+.logo {
+    width: 100%;                     /* largura solicitada */
+    height: 80px;                     /* ajuste conforme o formato do logo */
+    background-image: url("img/logo-tigre.svg");
+    background-size: contain;         /* mantém proporção do logo */
+    background-repeat: no-repeat;     
+    background-position: right center; /* alinhado à esquerda */
+}
+
+.box-txt {margin: 60px 0; width: 100%}
+.video-container {margin-bottom: 30px;}
+
+/* Containers */
+.container,
+.form-box {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.top {background: url(img/bg-top.jpg) center -50px no-repeat;
+    background-size: 100%;}
+
+.secao-padrao {
+    padding: 80px 0;
+}
+
+/* Utilidades */
+.blue { background: #041E50 !important; color: #ffffff; }
+.blue-txt {color: #041E50 !important; }
+
+.orange { background: #F4811F !important; color: #ffffff; }
+.orange h3 {color: #F4811F !important;}
+.orange .max-card {border-color: #041E50;}
+.orange .max-card h3 {color: #041E50 !important;}
+.orange-txt {color: #F4811F !important;}
+
+.purple {background: #7C4EA2;}
+.purple h2 {color: #F4811F !important;}
+.purple .card {background: #F4811F;}
+.purple .max-card {border-color: #F4811F; background: none !important}
+.purple .max-card h3 {color: #F4811F !important;}
+
+.light-blue h2 {color: #F4811F !important;}
+
+.dark-blue h3 {color: #041E50 !important;}
+
+/* Container geral */
+.input-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Cada bloco */
+.input-item {
+    padding: 18px 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Label */
+.input-item label {
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Texto auxiliar dentro do label */
+.input-item span {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* Inputs */
+.input-item input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* Foco */
+.input-item input:focus {
+    border-color: #fff;
+}
+
+/* Versão longa */
+.input-item.long {
+}
+
+
+/* ======================================================
+   GRID GERAL – DUAS COLUNAS
+====================================================== */
+
+.duas-colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.duas-colunas img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.col-direita h2 {
+    margin-top: 0;
+    font-size: 32px;
+}
+
+.col-direita p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+p.big {
+    font-size: 22px !important;
+}
+p.bigger {
+    font-size: 35px !important;
+}
+
+
+/* ======================================================
+   SEÇÃO COLABORADORES TIGRE
+====================================================== */
+
+.secao-colaboradores {
+    background: #004791;
+    color: #ffffff;
+}
+
+.div-img {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.titulo-orange {
+    color: #F4811F;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.descricao-colab {
+    font-size: 20px;
+    line-height: 1.55;
+    max-width: 760px;
+    margin-bottom: 60px;
+}
+
+.grid-colaboradores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 20px;
+    text-align: center;
+    align-items: start;
+    margin-bottom: 70px;
+}
+
+.icon-colab {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 10px;
+}
+
+.item-colab p {
+    font-size: 18px;
+    color: #F4811F;
+    line-height: 1.35;
+}
+
+.cta-muito-mais {
+    width: 100%;
+    border: 2px solid #F4811F;
+    border-radius: 20px;
+    padding: 25px 0;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    color: #F4811F;
+}
+
+
+/* ======================================================
+   FORMULÁRIO (SEÇÃO COMO SE CADASTRAR)
+====================================================== */
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.form-box {
+    background: #01579B;
+    border-radius: 20px;
+    padding: 50px 40px;
+}
+
+/* Títulos */
+.title {
+    text-align: center;
+    color: #FF8C00;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 25px;
+}
+
+.subtitle,
+.highlight,
+.video-title {
+    text-align: center;
+}
+
+.subtitle {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 28px;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.highlight {
+    font-size: 20px;
+    color: #FF8C00;
+    margin-bottom: 30px;
+}
+
+.video-title {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+/* Divisor */
+.divider {
+    width: 100%;
+    height: 2px;
+    background: #0A3D78;
+    margin: 20px 0 40px;
+}
+
+/* Inputs */
+.input-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 50px;
+}
+
+.input-item {
+    padding: 5px;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.input-item.long {
+    padding: 5px;
+}
+
+/* Vídeo */
+.video-box {
+    position: relative;
+    background: #001F3F;
+    border-radius: 25px;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.video-img {
+    width: 100%;
+    display: block;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 90px;
+    font-size: 55px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+}
+
+/* Botão final */
+.btn-action {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background: #FF8C00;
+    color: #fff;
+    padding: 25px 40px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 25px;
+    text-decoration: none;
+    max-width: 600px;
+}
+
+
+
+/* ======================================================
+   CARDS – 3 COLUNAS
+====================================================== */
+
+.cards-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #f5f5f5;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.card.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* alinha vertical */
+    align-items: center;     /* alinha horizontal */
+    text-align: center;
+}
+
+.card .icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #041E50;
+    margin: 10px 0 8px;
+    font-size: 22px;
+}
+
+.card h3.upper {
+    text-transform: uppercase;
+    color: #041E50;
+    margin: 10px 0 8px;
+    font-size: 32px;
+}
+
+
+.card p {
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+.max-card {
+    grid-column: 1 / -1;
+    background: none;
+    border: 5px solid #F4811F;
+}
+
+.max-card h3 {
+    font-size: 40px;
+    color: #F4811F;
+}
+
+img.icon-tigre {width: 200px !important;}
+
+/* ======================================================
+   RESPONSIVO
+====================================================== */
+
+@media (max-width: 1100px) {
+
+    .duas-colunas {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .col-direita {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .grid-colaboradores {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .cards-3col {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .secao-padrao {
+        padding: 50px 0;
+    }
+
+    .grid-colaboradores {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-orange {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .descricao-colab {
+        text-align: center;
+    }
+
+    .cta-muito-mais {
+        font-size: 22px;
+        padding: 18px 0;
+    }
+}
